@@ -6,36 +6,43 @@ Certbot installation process is more complicated that it need to be and I'm tire
 - [x] [Install Docker](https://docs.docker.com/get-docker/)
 
 - [x] Clone this repo
-```shell
-$ git clone git@github.com:sfertman/certbot-docker
-$ cd certbot-docker
-```
+
+  ```shell
+  $ git clone git@github.com:sfertman/certbot-docker
+  $ cd certbot-docker
+  ```
 
 - [x] Build
-```shell
-$ build.sh
-```
+
+  ```shell
+  $ build.sh
+  ```
 
 - [x] AWS setup
 - Create certbot user in IAM
 - Create and attach a policy to allow dns challenge
 - Create security credentials for this certbot IAM user
 - Create AWS credentials file and write it to `~/.aws/credentials`
-```ini
-[default]
-aws_access_key_id = YOURAWSACCESSKEYID
-aws_secret_access_key = yourawssecretaccesskey
-```
+
+  ```ini
+  [default]
+  aws_access_key_id = YOURAWSACCESSKEYID
+  aws_secret_access_key = yourawssecretaccesskey
+  ```
+
 - Create AWS config file and write it to `~/.aws/config`:
-```ini
-[default]
-region = us-east-1 # for example
-```
+
+  ```ini
+  [default]
+  region = us-east-1 # for example
+  ```
+
 - [x] Run
-```
-$ certbot.sh certonly [...args]
-$ certbot.sh renew [...args]
-```
+  ```
+  $ certbot.sh certonly [...args]
+  $ certbot.sh renew [...args]
+  ```
+
 This will:
 - write logs to `~/letsencrypt/log/`
 - save config and certs in `~/letsencrypt/config/`
