@@ -18,7 +18,7 @@ $ build.sh
 
 - [x] AWS setup
 - Create certbot user in IAM
-- Create and attach a policy to allow dns callenge
+- Create and attach a policy to allow dns challenge
 - Create security credentials for this certbot IAM user
 - Create AWS credentials file and write it to `~/.aws/credentials`
 ```ini
