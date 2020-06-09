@@ -38,5 +38,5 @@ $ certbot.sh renew [...args]
 ```
 This will:
 - write logs to `~/letsencrypt/log/`
-- save config in `~/letsencrypt/config/`
-- store certificates in `~/letsencrypt/work/`
+- save config and certs in `~/letsencrypt/config/`
+- use this for "work" `~/letsencrypt/work/`
